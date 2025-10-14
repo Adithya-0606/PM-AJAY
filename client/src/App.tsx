@@ -8,12 +8,22 @@ import { AppSidebar } from "@/components/AppSidebar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import Dashboard from "@/pages/Dashboard";
+import GISMapping from "@/pages/GISMapping";
+import Communications from "@/pages/Communications";
+import Reports from "@/pages/Reports";
+import Agencies from "@/pages/Agencies";
+import Settings from "@/pages/Settings";
 import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Dashboard} />
+      <Route path="/map" component={GISMapping} />
+      <Route path="/messages" component={Communications} />
+      <Route path="/reports" component={Reports} />
+      <Route path="/agencies" component={Agencies} />
+      <Route path="/settings" component={Settings} />
       <Route component={NotFound} />
     </Switch>
   );
